@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/stepper_main_iv_status"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/stepper_status"
+        android:backgroundTint="@color/colorAccent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="wrap"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24"
+        />
+
+    <TextView
+        android:id="@+id/stepper_main_tv_status"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/stepper_main_iv_status"
+        app:layout_constraintEnd_toEndOf="@+id/stepper_main_iv_status"
+        app:layout_constraintStart_toStartOf="@+id/stepper_main_iv_status"
+        app:layout_constraintTop_toTopOf="@+id/stepper_main_iv_status"
+        android:text="123"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintHeight_default="wrap"
+        android:visibility="gone"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <TextView
+        android:id="@+id/stepper_main_tv_ttl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="1 -Planejamento"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stepper_main_tv_close_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="20/05/2020 17:00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/stepper_main_tv_ttl"
+        app:layout_constraintStart_toEndOf="@+id/stepper_main_iv_close_date"
+        app:layout_constraintTop_toBottomOf="@+id/stepper_main_tv_ttl" />
+
+    <ImageView
+        android:id="@+id/stepper_main_iv_close_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/stepper_main_tv_ttl"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+
+
+</android.support.constraint.ConstraintLayout>
