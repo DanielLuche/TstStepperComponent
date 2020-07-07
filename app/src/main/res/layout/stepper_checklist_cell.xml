@@ -44,7 +44,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/stepper_checklist_tv_start_date"
         app:layout_constraintStart_toStartOf="@+id/stepper_checklist_tv_ttl"
         app:layout_constraintTop_toTopOf="@+id/stepper_checklist_tv_start_date"
-        app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+        android:src="@drawable/ic_baseline_calendar_today_24" />
 
     <TextView
         android:id="@+id/stepper_checklist_tv_start_date"
@@ -60,7 +60,7 @@
 
         />
 
-    <Guideline
+    <android.support.constraint.Guideline
         android:id="@+id/stepper_checklist_gd_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,15 +69,15 @@
 
     <ImageView
         android:id="@+id/stepper_checklist_iv_action"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:background="@color/colorPrimary"
         android:tint="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/stepper_checklist_gd_end"
         app:layout_constraintTop_toBottomOf="@+id/stepper_checklist_tv_ttl"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        android:src="@android:drawable/ic_media_play" />
 
     <View
         android:id="@+id/view"

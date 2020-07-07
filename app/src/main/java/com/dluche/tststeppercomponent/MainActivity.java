@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.dluche.tststeppercomponent.model.BaseStep;
 import com.dluche.tststeppercomponent.model.StepAction;
+import com.dluche.tststeppercomponent.model.StepChecklist;
 import com.dluche.tststeppercomponent.model.StepMain;
 
 import java.util.ArrayList;
@@ -41,9 +42,14 @@ public class MainActivity extends AppCompatActivity {
                         int targetPosition = mainPosition +1;
                         if(isShown){
                             sources.remove(
+                                targetPosition + 1
+                            );
+
+                            sources.remove(
                                 targetPosition
                             );
-                            mAdapter.notifyItemRemoved(targetPosition);
+                            //mAdapter.notifyItemRemoved(targetPosition);
+                            mAdapter.notifyItemRangeRemoved(targetPosition,2);
                         }else{
                             sources.add(
                                 targetPosition,
@@ -54,7 +60,25 @@ public class MainActivity extends AppCompatActivity {
                                     "Ronaldinho"
                                 )
                             );
-                            mAdapter.notifyItemInserted(targetPosition);
+                            sources.add(
+                                targetPosition + 1,
+                                new StepChecklist(
+                                    "Ação",
+                                    " 20/05/2020 17:05",
+                                    " 25/05/2020 18:05",
+                                    "Ronaldinho",
+                                    "BttXApp",
+                                    "22 - Namoa"
+                                )
+                                /*new StepAction(
+                                    "Ação",
+                                    " 20/05/2020 17:05",
+                                    " 25/05/2020 18:05",
+                                    "Romario"
+                                )*/
+                            );
+                            //mAdapter.notifyItemInserted(targetPosition);
+                            mAdapter.notifyItemRangeInserted(targetPosition,2);
                         }
                     }
                 }
@@ -77,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
             "2.Retirada de peças",
             ""
         );
+        StepMain stepMain3 = new StepMain(
+            "3.1 Atendimento",
+            ""
+        );
         /*StepAction stepAction = new StepAction(
             "Ação",
             " 20/05/2020 17:05",
@@ -93,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         );*/
         sources.add(stepMain);
         sources.add(stepMain2);
+        sources.add(stepMain3);
         /*sources.add(stepAction);
         sources.add(stepChecklist);*/
     }

@@ -44,7 +44,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/stepper_action_tv_start_date"
         app:layout_constraintStart_toStartOf="@+id/stepper_action_tv_ttl"
         app:layout_constraintTop_toTopOf="@+id/stepper_action_tv_start_date"
-        app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+        android:src="@drawable/ic_baseline_calendar_today_24" />
 
     <TextView
         android:id="@+id/stepper_action_tv_start_date"
@@ -74,7 +74,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/stepper_action_tv_end_date"
         app:layout_constraintStart_toStartOf="@+id/stepper_action_iv_date_start"
         app:layout_constraintTop_toTopOf="@+id/stepper_action_tv_end_date"
-        app:srcCompat="@drawable/ic_baseline_check_24" />
+        android:src="@drawable/ic_baseline_check_24" />
 
     <TextView
         android:id="@+id/stepper_action_tv_end_date"
@@ -96,7 +96,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/stepper_action_tv_user"
         app:layout_constraintStart_toStartOf="@+id/stepper_action_iv_date_end"
         app:layout_constraintTop_toTopOf="@+id/stepper_action_tv_user"
-        app:srcCompat="@drawable/ic_baseline_person_outline_24" />
+        android:src="@drawable/ic_baseline_person_outline_24" />
 
     <TextView
         android:id="@+id/stepper_action_tv_user"
