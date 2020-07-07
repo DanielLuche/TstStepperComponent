@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    >
 
     <ImageView
         android:id="@+id/stepper_main_iv_status"
@@ -23,6 +24,28 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         app:srcCompat="@drawable/ic_baseline_check_circle_24"
+        />
+
+    <View
+        android:id="@+id/stepper_main_v_bottom_status"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gl_start"
+        app:layout_constraintTop_toBottomOf="@id/stepper_main_iv_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorAccent"
+        />
+
+    <View
+        android:id="@+id/stepper_main_v_top_status"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gl_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/stepper_main_iv_status"
+        android:background="@color/colorAccent"
         />
 
     <TextView
@@ -70,7 +93,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/stepper_main_tv_ttl"
         app:layout_constraintStart_toEndOf="@+id/stepper_main_iv_close_date"
-        app:layout_constraintTop_toBottomOf="@+id/stepper_main_tv_ttl" />
+        app:layout_constraintTop_toBottomOf="@+id/stepper_main_tv_ttl"
+        />
 
     <ImageView
         android:id="@+id/stepper_main_iv_close_date"

@@ -3,11 +3,14 @@
     android:fromDegrees="90"
     android:toDegrees="90">
     <shape android:shape="line">
+        <size
+            android:width="1000dp"
+            android:height="1000dp"/>
+
         <stroke
-            android:width="5dp"
-            android:dashGap="2dp"
-            android:dashWidth="5dp"
-            android:color="@color/colorAccent"
-            />
+            android:width="40dp"
+            android:dashGap="20dp"
+            android:dashWidth="40dp"
+            android:color="@color/colorAccent"/>
     </shape>
 </rotate>

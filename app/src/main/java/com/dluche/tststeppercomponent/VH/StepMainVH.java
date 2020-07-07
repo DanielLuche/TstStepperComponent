@@ -16,6 +16,8 @@ public class StepMainVH extends RecyclerView.ViewHolder{
     private TextView tvTtl;
     private TextView tvCloseDate;
     private ImageView ivEndDate;
+    private View vTopStatus;
+    private View vBottomStatus;
     private boolean childShown = false;
     private final StepsAdapter.onMainClickListener onClickListener;
 
@@ -27,6 +29,8 @@ public class StepMainVH extends RecyclerView.ViewHolder{
 
     private void bindViews() {
         ivStatus = this.itemView.findViewById(R.id.stepper_main_iv_status);
+        vTopStatus = this.itemView.findViewById(R.id.stepper_main_v_top_status);
+        vBottomStatus = this.itemView.findViewById(R.id.stepper_main_v_bottom_status);
         tvStatus = this.itemView.findViewById(R.id.stepper_main_tv_status);
         tvTtl = this.itemView.findViewById(R.id.stepper_main_tv_ttl);
         tvCloseDate = this.itemView.findViewById(R.id.stepper_main_tv_close_date);
@@ -56,6 +60,9 @@ public class StepMainVH extends RecyclerView.ViewHolder{
     }
 
     public void bindData(StepMain stepMain){
+        if(getAdapterPosition() == 0){
+            vTopStatus.setVisibility(View.GONE);
+        }
         tvTtl.setText(stepMain.getStepTtl());
         tvCloseDate.setText(stepMain.getEndDate());
     }
